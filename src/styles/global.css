@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #0D6EFD;
+  --primary-dark: #0a58ca;
+  --orange: #FF7043;
+  --orange-light: #FF9800;
+  --text: #1C1C1C;
+  --text-secondary: #8B96A5;
+  --text-light: #BDC4CD;
+  --border: #DEE2E7;
+  --bg: #F7FAFC;
+  --bg-white: #FFFFFF;
+  --green: #00B517;
+  --red: #FA3434;
+  --star: #FF9017;
+  --radius: 6px;
+  --shadow: 0 1px 4px rgba(0,0,0,0.08);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: var(--radius); font-size: 14px; font-weight: 500; border: none; transition: all 0.2s; }
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-outline { background: white; color: var(--primary); border: 1px solid var(--primary); }
+.btn-outline:hover { background: var(--primary); color: white; }
+.btn-orange { background: var(--orange); color: white; }
+.btn-orange:hover { background: #e64a19; }
+
+/* Stars */
+.stars { display: flex; gap: 2px; }
+.star { color: var(--star); font-size: 12px; }
+.star.empty { color: var(--border); }
+
+/* Badge */
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.badge-red { background: #FFF0F0; color: var(--red); }
+.badge-green { background: #ECFDF3; color: var(--green); }
+.badge-blue { background: #EFF6FF; color: var(--primary); }
+
+/* Card */
+.card { background: white; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; }
+
+/* Section Title */
+.section-title { font-size: 18px; font-weight: 600; color: var(--text); }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.section-header a { color: var(--primary); font-size: 13px; }
+
+/* Price */
+.price { font-size: 16px; font-weight: 600; color: var(--text); }
+.price-old { font-size: 13px; color: var(--text-secondary); text-decoration: line-through; }
+.price-discount { font-size: 12px; color: var(--red); font-weight: 500; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hide-mobile { display: none !important; }
+}
+@media (min-width: 769px) {
+  .hide-desktop { display: none !important; }
+}
